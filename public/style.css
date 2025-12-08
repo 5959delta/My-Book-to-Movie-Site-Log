@@ -1,0 +1,36 @@
+nav a {
+  color: #0b72b9;
+  text-decoration: 'text-decoration-line';
+  margin: 0 10px;
+}
+nav a.active {
+  
+  font-weight: bold;
+  border-bottom: 2px solid #0b72b9;
+}
+
+main.content {
+  max-width: 68ch;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+p {
+    color: purple;
+  }
+/* Example using an h1 tag */
+h1 {
+  color: #0e0d0d; /* Red color using hex code */
+}
+
+/* Example using a class */
+.page-title {
+  color: rgb(0, 0, 255); /* Blue color using RGB value */
+}
+
+/* Example using an ID */
+#main-title {
+  color: rgb(128, 0, 0); /* Green color using color name */
+}
+
+

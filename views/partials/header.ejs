@@ -1,0 +1,25 @@
+<header>
+  <h1><%= siteTitle || "My Book to Movie Site Log!"%></h1>
+  <nav>
+    <a href="/"        class="<%= activePage === 'home' ? 'active' : '' %>">home</a> |
+    <a href="/why"     class="<%= activePage === 'why' ? 'active' : '' %>">why</a> |
+    <a href="/add"     class="<%= activePage === 'add entry' ? 'active' : '' %>">add entry</a> |
+    <a href="/genres"   class="<%= activePage === 'genres' ? 'active' : '' %>">genres</a> |
+    <a href="/about"   class="<%= activePage === 'about' ? 'active' : '' %>">about</a> 
+ <link rel="icon" href="/favicon.ico" />
+
+ <p class="meta">Visits this session:
+
+    <%= typeof sessionVisits !== 'undefined' ? sessionVisits : 0 %>
+  </p>
+
+ </nav>
+  <hr>
+</header>
+
+
+
+  
+
+
+

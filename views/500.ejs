@@ -1,0 +1,25 @@
+<%- include('partials/header') %>
+<main class="content">
+  <h1>Sorry for any Inconvenience this may have caused you! 👩‍💻</h1>
+  <p><%= message %></p>
+  <% if (stack) { %>
+    <details>
+      <summary>👇Please use the Home button below to return to the Book to Movie Site Log! </summary>
+      <pre><%= stack %></pre>
+    </details>
+  <% } %>
+  <p><a class="btn" href="/">Return Home</a></p>
+</main>
+<%- include('partials/footer') %>
+
+
+
+
+
+
+
+
+
+
+
+
