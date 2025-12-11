@@ -2,10 +2,12 @@
 
 
  const app = express();  
-const PORT = 3000;
+ const PORT = process.env.PORT || 3000;
+
+
 
 app.use(express.static("public"));
-
+app.use(express.static("public", { maxAge: "1d" }));
 
  import path from "path";
 import { fileURLToPath } from "url";
@@ -57,21 +59,18 @@ app.get("/time", (req, res) => {
 
 
 app.get("/", (req, res) => {
-  res.render("Home", { pageTitle: "Home", activePage: "home"  });
+  res.render("home", { pageTitle: "home", activePage: "home"  });
 });
 app.get("/add", (req, res) => {
-  res.render("Add", { pageTitle: "Add", activePage: "add entry" });
+  res.render("add", { pageTitle: "add", activePage: "add entry" });
 });
 app.get("/genres", (req, res) => {
-  res.render("Genres", { pageTitle: "Genres", activePage: "genres" });
+  res.render("genres", { pageTitle: "genres", activePage: "genres" });
 });
 
-
-app.get("/why", (req, res) => {
-  res.render("Why", { pageTitle: "Why I Have Made this App! 🖥❤", activePage: "why" });
+app.get("/Why", (req, res) => {
+  res.render("why", { pageTitle: "Why I Have Made this App! 🖥❤", activePage: "why" });
 });
-
-
 
 app.get("/about", (req, res) => {
   const sampleabout = ["Safe Haven","Save the Last Dance", "Where the Heart Is", "The Last Song", "SisterHood of the Traveling Pants",
